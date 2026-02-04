@@ -14,8 +14,8 @@
         --button-bg: rgba(255, 255, 255, 0.9);
         --button-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         --inv-button-bg: #1f1f1f;
-        --accent-color: #b000b3;
-        --accent-gradient: linear-gradient(135deg, #b000b3 0%, #8e00a0 100%);
+        --accent-color: #358ffd;
+        --accent-gradient: linear-gradient(135deg, #358ffd 0%, #0069d9 100%);
         --border-radius: 16px;
         --border-radius-sm: 12px;
     }
@@ -224,6 +224,8 @@
         --button-bg: rgba(70, 70, 70, 0.9);
         --button-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         --inv-button-bg: #efefef;
+        --accent-color: #b000b3;
+        --accent-gradient: linear-gradient(135deg, #b000b3 0%, #8e00a0 100%);
     }
 
     #theme-switch {
@@ -573,4 +575,64 @@
             opacity: 1;
             width: 150px;
         }
+    }
+
+    /* Contact Button Customization */
+
+    /* Light Mode: Blue Theme */
+    #contact1,
+    #contact2,
+    #contact3 {
+        background: transparent;
+        /* Make background transparent for outline style */
+        border-color: #358ffd;
+        /* Blue border */
+        box-shadow: 0 0 15px rgba(53, 143, 253, 0.2);
+        /* Soft blue glow */
+    }
+
+    /* Colorize Light Mode Icons to Blue */
+    #contact1 img:first-child,
+    #contact2 img:first-child,
+    #contact3 img:first-child {
+        /* Filter to turn the icon Blue (#358ffd) */
+        filter: brightness(0) saturate(100%) invert(69%) sepia(55%) saturate(5887%) hue-rotate(207deg) brightness(102%) contrast(105%);
+    }
+
+    /* Dark Mode: Purple Theme */
+    .darkmode #contact1,
+    .darkmode #contact2,
+    .darkmode #contact3 {
+        border-color: #b000b3;
+        /* Purple border */
+        box-shadow: 0 0 15px rgba(176, 0, 179, 0.4);
+        /* Purple glow */
+    }
+
+    /* Use Purple SVGs in Dark Mode */
+    .darkmode #contact1 img:last-child {
+        content: url('instagram-p.svg');
+    }
+
+    .darkmode #contact2 img:last-child {
+        content: url('github-p.svg');
+    }
+
+    .darkmode #contact3 img:last-child {
+        content: url('linkedin-p.svg');
+    }
+
+    /* Layout Helpers */
+    .project-links-row {
+        display: flex;
+        justify-content: flex-start;
+        /* Align left */
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Adjust local margins for links in this row to overlap/be closer */
+    .project-links-row .project-link {
+        margin: 0 10px 20px 24px;
+        /* Reduced right margin */
     }

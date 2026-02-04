@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,71 @@
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="main.js" defer></script>
 </head>
+
 <body>
     <div class="container">
-         <button id="theme-switch">
+        <button id="theme-switch">
             <img src="moon.svg" alt="Dark mode icon" width="24" height="24">
             <img src="light.svg" alt="Light mode icon" width="24" height="24">
         </button>
-         <button id="return">
+        <button id="return">
             <img src="return.svg" alt="Dark mode icon" width="24" height="24">
             <img src="return2.svg" alt="Dark mode icon" width="24" height="24">
         </button>
-        <h1>Project Title</h1>
-            <div class="border">
-                <center>
-                <h2>Contact Me</h2>    
+        <h1>HypixelTracker</h1>
+        <div class="grid2">
+            <div class="project-detail">
+                <img src="hypixeltracker2.png" alt="Description 1" class="project-detail-img">
+                <div class="project-detail-desc">
+                    <h2>Item Database</h2>
+                    <p>This feature allows users to view and sort items based on various criteria such as name, type,
+                        and rarity.</p>
+                </div>
+            </div>
+            <div class="project-detail">
+                <video src="ScreenRec_251103_9443.mp4" alt="Description 2" class="project-detail-img" controls></video>
+                <div class="project-detail-desc">
+                    <h2>Other Features</h2>
+                    <p>The website also allows the tracking of player stats and other data from their profile along with
+                        Mayor statistics and perks.</p>
+                </div>
+            </div>
+        </div>
+        <p>
+            <center>
+                The tracking website was built using react for the frontend and node.js for the backend.
+                The data is fetched from an open API provided by Hypixel and a few others, which supplies all
+                the necessary information.
+                The site features a responsive design, ensuring usability across various devices and is hosted
+                using Microsoft Azure.
+            </center>
+        </p>
+        <div class="border">
+            <center>
+                <h2>Contact Me</h2>
                 <div class="grid3">
                     <div>
-                       <button id="contact1">
+                        <button id="contact1">
                             <img src="instagram.svg" alt="Instagram Icon" width="72" height="72">
                             <img src="instagram-w.svg" alt="Instagram Icon" width="72" height="72">
                         </button>
                     </div>
-                                        <div>
-                       <button id="contact2">
+                    <div>
+                        <button id="contact2">
                             <img src="github.svg" alt="github Icon" width="72" height="72">
                             <img src="github-w.svg" alt="github Icon" width="72" height="72">
                         </button>
                     </div>
                     <div>
-                       <button id="contact3">
+                        <button id="contact3">
                             <img src="linkedin.svg" alt="linkedin Icon" width="72" height="72">
                             <img src="linkedin-w.svg" alt="linkedin Icon" width="72" height="72">
-                        </button>                       
+                        </button>
                     </div>
                 </div>
             </center>
-            </div>
-</div>
+        </div>
+    </div>
 </body>
+
 </html>
