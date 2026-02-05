@@ -77,3 +77,36 @@ const createShootingStar = () => {
 setInterval(() => {
     createShootingStar();
 }, 2000);
+
+/* Static Stars Script */
+const createStaticStars = () => {
+    const starCount = 30;
+    
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.classList.add('static-star');
+        
+        // Random position 0-100%
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        
+        // Random size between 2px and 5px
+        const size = Math.random() * 3 + 2;
+        
+        // Random opacity between 0.2 and 0.7 for depth
+        const opacity = Math.random() * 0.5 + 0.2;
+        
+        star.style.left = `${x}vw`;
+        star.style.top = `${y}vh`;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        
+        // Use CSS variable for the animation to fade to the correct opacity
+        star.style.setProperty('--star-opacity', opacity);
+        
+        document.body.appendChild(star);
+    }
+}
+
+// Initialize static stars
+createStaticStars();

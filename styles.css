@@ -636,3 +636,19 @@
         margin: 0 10px 20px 24px;
         /* Reduced right margin */
     }
+/* Static Star Styles */
+.static-star {
+    position: fixed;
+    background: rgb(170, 85, 255);
+    border-radius: 50%;
+    z-index: -2;
+    pointer-events: none;
+    box-shadow: 0 0 4px rgba(170, 85, 255, 0.8);
+    opacity: 0; /* Star hidden initially */
+    animation: starFadeIn 1.5s ease-out forwards;
+}
+
+@keyframes starFadeIn {
+    from { opacity: 0; }
+    to { opacity: var(--star-opacity); }
+}
